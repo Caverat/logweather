@@ -1,9 +1,13 @@
 {
   "name": "api",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.0"
+  },
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

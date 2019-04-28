@@ -9,8 +9,8 @@ import { SensorReading } from '../sensor-reading';
 })
 export class SensorService {
 
-  //private sensorsUrl = 'http://localhost:3000/sensors';
-  private sensorsUrl = 'http://logweather.herokuapp.com/sensors';
+  private sensorsUrl = 'http://localhost:3000/sensors';
+  //private sensorsUrl = 'http://logweather.herokuapp.com/sensors';
   constructor(
     private http: HttpClient) { }
 
