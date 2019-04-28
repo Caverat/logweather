@@ -1,0 +1,19 @@
+<mat-card *ngIf="sensor">
+  <mat-card-header>
+    <mat-card-title>Målinger for {{sensor.name}}</mat-card-title>
+  </mat-card-header>
+  <mat-table matSort matSortActive="timestamp" matSortDirection="desc" [dataSource]="dataSource">
+    <ng-container matColumnDef="timestamp">
+      <mat-header-cell mat-sort-header *matHeaderCellDef>Tidspunkt</mat-header-cell>
+      <mat-cell *matCellDef="let log">{{log.timestamp | date:'short'}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="value">
+      <mat-header-cell mat-sort-header *matHeaderCellDef>Verdi</mat-header-cell>
+      <mat-cell *matCellDef="let log">{{log.value | number:'1.1-1'}} &deg;C</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</mat-card>

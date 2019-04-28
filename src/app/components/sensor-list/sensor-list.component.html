@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Sensorer</mat-card-title>
+  </mat-card-header>
+  <mat-nav-list role="list">
+      <a mat-list-item *ngFor="let sensor of sensors" routerLink="/sensor/{{sensor._id}}/logs">
+        <span matLine>{{sensor.name}}</span>
+        <button mat-icon-button (click)="onEdit($event)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </a>
+  </mat-nav-list>
+</mat-card>
